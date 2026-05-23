@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+/*
+  Color tokens locked to ZOST logo palette:
+  - Deep Navy Blue:   #071C34
+  - Luxury Gold:      #D4A63D
+  - Ocean Blue:       #0E5E6F
+  - Soft Sand Beige:  #F6F1E8
+  - White:            #FFFFFF
+*/
+
+:root {
+  --zost-navy: #071C34;
+  --zost-gold: #D4A63D;
+  --zost-ocean: #0E5E6F;
+  --zost-sand: #F6F1E8;
+  --zost-white: #FFFFFF;
+
+  --font-heading: 'Fraunces', serif;
+  --font-body: 'Manrope', sans-serif;
+
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(180deg, var(--zost-sand) 0%, var(--zost-white) 40%);
+  color: var(--zost-navy);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.dark body {
+  background: linear-gradient(180deg, #04111f 0%, #071c34 38%, #04111f 100%);
+  color: var(--zost-sand);
+}
+
+#root { min-height: 100vh; }
+
+/* Glass / card surface tuned for palette */
+.glass {
+  background: linear-gradient(145deg, rgba(246,241,232,0.85), rgba(255,255,255,0.6));
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(7,28,52,0.06);
+}
+.dark .glass {
+  background: linear-gradient(145deg, rgba(7,28,52,0.6), rgba(4,17,34,0.45));
+  border: 1px solid rgba(212,166,61,0.12);
+}
+
+/* Texture overlay for subtle cinema feel */
+.texture-overlay::before{
+  content:'';position:absolute;inset:0;pointer-events:none;opacity:0.12;
+  background-image:repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 8px);
+}
+
+/* Utility color classes (used across components) */
+.text-navy{ color: var(--zost-navy) !important; }
+.bg-navy{ background-color: var(--zost-navy) !important; }
+.text-gold{ color: var(--zost-gold) !important; }
+.bg-gold{ background-color: var(--zost-gold) !important; }
+.text-ocean{ color: var(--zost-ocean) !important; }
+.bg-ocean{ background-color: var(--zost-ocean) !important; }
+.text-sand{ color: var(--zost-sand) !important; }
+.bg-sand{ background-color: var(--zost-sand) !important; }
+.border-gold{ border-color: var(--zost-gold) !important; }
+
+/* Shadows tuned to palette */
+.luxury-shadow{ box-shadow: 0 20px 40px rgba(7,28,52,0.16), 0 6px 18px rgba(7,28,52,0.08); }
+.dark .luxury-shadow{ box-shadow: 0 20px 40px rgba(0,0,0,0.45), 0 8px 20px rgba(0,0,0,0.28); }
+
+/* Section padding helper */
+.section-pad{ padding: 3.5rem 1rem; }
+
+/* Heading font */
+.font-heading{ font-family: var(--font-heading); }
+
+/* Slightly calmer typography rhythm across the site */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em;
+}
+
+p, li, label, input, textarea, button {
+  letter-spacing: -0.01em;
+}
