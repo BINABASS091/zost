@@ -3,7 +3,7 @@ export const company = {
   shortName: 'ZOST',
   logoUrl: 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779288516/zost_premium_logo1_rirca8.png',
   tagline: 'Crafting luxury Zanzibar journeys with soul, elegance, and flawless local expertise.',
-  email: 'zost.zanzibarovation.com',
+  website: 'zost.zanzibarovation.com',
   phone: '+255 792 179 051',
   whatsapp: '+255792179051',
   address: 'Stone Town, Zanzibar, Tanzania',
@@ -28,7 +28,7 @@ export const seo = {
 }
 
 export const heroSlides = [
-  
+  'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779540443/aaa_faq_ixagv2.webp',
   'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286741/family9_bdotxh.jpg',
   'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459606/Jozani_Forest_Tour7_prfaba.jpg',
   'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459609/Jozani_Forest_Tour4_pg9de1.jpg',
@@ -228,6 +228,47 @@ export const whyChooseItems = [
     title: '24/7 Support',
     text: 'From arrival to departure, our concierge team is always one message away.',
   },
+]
+
+export const galleryImages2 = [
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459605/Honeymoon_Escape4_gultna.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459603/Honeymoon_Escape3_z4jthn.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286743/family15_cpyfkb.webp',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286742/family7_xmlfue.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286742/family12_pfrlok.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286741/family8_zirtnf.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286699/beach8_bgvir9.jpg',
+  'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286740/family5_sezwnf.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286739/family3_oztvnp.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286740/family6_gbnelp.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286741/family9_b9gpja.webp',
+
+  'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779536946/Salaam_Cave_Tour_uoc8y4.avif',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459609/Jozani_Forest_Tour4_pg9de1.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459606/Jozani_Forest_Tour7_prfaba.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459607/Jozani_Forest_Tour5_vkdkhi.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459606/Jozani_Forest_Tour8_c21zcx.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459607/Jozani_Forest_Tour9_dz9pcv.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459605/Jozani_Forest_Tour_s3zamq.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286744/forest5_vzfduq.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286743/forest1_j0zgpw.webp',
+
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286747/island1_dtmeam.jpg',
+  'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779537152/Prison_Island2_nbupim.avif',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779537151/Prison_Island_wa08hw.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779460285/Nakupenda_Sandbank88_yirzng.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459606/mnemba_jrkdmz.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286795/island5_nzb8ds.avif',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286746/hotel8_vnlgsq.jpg',
+
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459603/Honeymoon_Escape2_wygloh.webp',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779459603/Honeymoon_Escape_zvycyx.jpg',
+  'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286802/nungwi_car_m3oart.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286801/nungwi_car1_xnjtf3.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286801/nungwi_car4_zqc7ba.avif',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286801/nungwi_car5_phku7z.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286743/family15_hdglxa.jpg',
+  // 'https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286742/family16_qfhf0l.jpg',
 ]
 
 export const galleryImages = [

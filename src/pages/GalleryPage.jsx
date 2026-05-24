@@ -22,7 +22,7 @@ export default function GalleryPage() {
           description="A premium visual collection of beaches, wildlife, resorts, culture, and unforgettable guest experiences."
           center
         />
-        <div className="mx-auto mt-10 max-w-7xl rounded-[2rem] bg-white/60 p-4 shadow-[0_20px_60px_rgba(7,28,52,0.08)] backdrop-blur-md dark:bg-midnight/35 sm:p-6">
+        <div className="glass mx-auto mt-10 max-w-7xl rounded-[2rem] p-4 sm:p-6">
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-12">
             {galleryImages.map((image, index) => (
             <motion.img

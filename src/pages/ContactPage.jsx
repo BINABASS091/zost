@@ -36,8 +36,18 @@ export default function ContactPage({ openBooking }) {
             <div className="glass rounded-3xl p-6">
               <h3 className="font-heading text-2xl text-navy dark:text-sand">Contact Information</h3>
               <ul className="mt-4 space-y-3 text-sm text-navy/80 dark:text-sand/80">
-                <li className="flex items-center gap-2"><Mail size={16} /> {company.email}</li>
-                <li className="flex items-center gap-2"><Phone size={16} /> {company.phone}</li>
+                <li className="flex items-center gap-2">
+                  <Mail size={16} />
+                  <a href={`https://${company.website}`} target="_blank" rel="noreferrer" className="transition hover:text-gold">
+                    {company.website}
+                  </a>
+                </li>
+                <li className="flex items-center gap-2">
+                  <Phone size={16} />
+                  <a href={`tel:${company.phone.replace(/\s+/g, '')}`} className="transition hover:text-gold">
+                    {company.phone}
+                  </a>
+                </li>
                 <li className="flex items-center gap-2"><MapPin size={16} /> {company.address}</li>
               </ul>
               <a

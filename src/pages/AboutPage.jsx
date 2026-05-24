@@ -17,7 +17,7 @@ export default function AboutPage({ openBooking }) {
 
       <section className="section-pad">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="rounded-[2rem] bg-white/70 p-8 shadow-[0_20px_60px_rgba(7,28,52,0.08)] backdrop-blur-md dark:bg-midnight/40 sm:p-10">
+          <div className="glass rounded-[2rem] p-8 sm:p-10">
             <SectionTitle
               eyebrow="Our Story"
               title="Refined Travel, Rooted in Zanzibar"

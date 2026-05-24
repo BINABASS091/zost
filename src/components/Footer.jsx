@@ -26,8 +26,8 @@ export default function Footer() {
                   className="h-18 w-18 rounded-full bg-transparent object-contain shadow-[0_12px_30px_rgba(0,0,0,0.18)]"
                 />
                 <div>
-                  <h3 className="font-heading text-3xl leading-none text-[#FFF7EA]">ZOST</h3>
-                  <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-[#F3D98B]">Travelling Agency</p>
+                  <h3 className="font-heading text-3xl leading-none text-sand">ZOST</h3>
+                  <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-gold">Travelling Agency</p>
                 </div>
               </div>
               <p className="mt-5 max-w-md text-sm leading-7 text-sand/78">{footer.description}</p>
@@ -64,8 +64,16 @@ export default function Footer() {
               <h4 className="text-sm font-semibold uppercase tracking-[0.22em] text-gold">Contact</h4>
               <ul className="mt-5 space-y-3 text-sm leading-7 text-sand/80">
                 <li>{company.address}</li>
-                <li>{company.email}</li>
-                <li>{company.phone}</li>
+                <li>
+                  <a href={`https://${company.website}`} target="_blank" rel="noreferrer" className="transition hover:text-gold">
+                    {company.website}
+                  </a>
+                </li>
+                <li>
+                  <a href={`tel:${company.phone.replace(/\s+/g, '')}`} className="transition hover:text-gold">
+                    {company.phone}
+                  </a>
+                </li>
               </ul>
             </div>
 

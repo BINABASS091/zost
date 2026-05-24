@@ -1,10 +1,15 @@
 import { motion } from 'framer-motion'
 import { Clock3, ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { fadeUp } from '../animations/variants'
 
 export default function TourCard({ tour, openBooking }) {
   return (
     <motion.article
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.22 }}
       whileHover={{ y: -10, scale: 1.01 }}
       transition={{ type: 'spring', stiffness: 170, damping: 20 }}
       className="glass luxury-shadow overflow-hidden rounded-3xl"

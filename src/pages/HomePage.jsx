@@ -9,7 +9,7 @@ import TestimonialCarousel from '../components/TestimonialCarousel'
 import TourCard from '../components/TourCard'
 import {
   ctaButtons,
-  featuredTours,
+  galleryImages2,
   galleryImages,
   heroSlides,
   promoHeadlines,
@@ -53,41 +53,28 @@ export default function HomePage({ openBooking }) {
           transition={{ duration: 0.9 }}
           className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-8 lg:px-12"
         >
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-[#F3D98B] sm:text-base">
+          <motion.p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-gold sm:text-base" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }}>
             {promoHeadlines[0]}
-          </p>
-          <h1 className="max-w-4xl font-heading text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] text-[#FFF7EA] drop-shadow-[0_8px_24px_rgba(7,28,52,0.35)] sm:text-7xl lg:text-[5.5rem]">
+          </motion.p>
+          <motion.h1 className="max-w-4xl font-heading text-5xl font-extrabold leading-[0.95] tracking-[-0.03em] text-sand drop-shadow-[0_8px_24px_rgba(7,28,52,0.35)] sm:text-7xl lg:text-[5.5rem]" initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.18, duration: 0.8 }}>
             Discover the Luxury of Zanzibar
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg font-semibold text-[#F9F1E3]/96 sm:text-xl lg:text-2xl">
+          </motion.h1>
+          <motion.p className="mt-6 max-w-2xl text-lg font-semibold text-sand/96 sm:text-xl lg:text-2xl" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.24 }}>
             Exclusive island adventures, ocean escapes, and unforgettable tropical experiences.
-          </p>
-          <p className="mt-4 max-w-2xl text-base font-medium text-[#F9F1E3]/86 sm:text-lg">{tourismSlogans[18]}</p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
+          </motion.p>
+          <motion.p className="mt-4 max-w-2xl text-base font-medium text-sand/86 sm:text-lg" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}>{tourismSlogans[18]}</motion.p>
+          <motion.div className="mt-8 flex flex-wrap justify-center gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.36 }}>
             <Link to="/tours" className="rounded-full bg-gold px-7 py-4 text-sm font-bold uppercase tracking-[0.22em] text-navy transition hover:bg-sand sm:px-8 sm:py-4 sm:text-base">
               Explore Experiences
             </Link>
-            <button onClick={openBooking} className="rounded-full border border-sand/60 px-7 py-4 text-sm font-bold uppercase tracking-[0.22em] text-sand transition hover:bg-white/15 sm:px-8 sm:py-4 sm:text-base">
+            <motion.button whileHover={{ scale: 1.03 }} onClick={openBooking} className="rounded-full border border-sand/60 px-7 py-4 text-sm font-bold uppercase tracking-[0.22em] text-sand transition hover:bg-white/15 sm:px-8 sm:py-4 sm:text-base">
               Book Your Journey
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         </motion.div>
       </section>
-
-      <section className="section-pad">
-        <SectionTitle
-          eyebrow="Featured Journeys"
-          title="Signature Zanzibar Experiences"
-          description="From reef adventures to private cultural moments, every experience is tailored for comfort, wonder, and flawless execution."
-          center
-        />
-        <div className="mx-auto mt-12 grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {featuredTours.map((tour) => (
-            <TourCard key={tour.id} tour={tour} openBooking={openBooking} />
-          ))}
-        </div>
-      </section>
-
+      
+      
       <MotionSection className="section-pad pt-2">
         <SectionTitle
           eyebrow="Why Choose ZOST"
@@ -117,7 +104,7 @@ export default function HomePage({ openBooking }) {
           center
         />
         <div className="mx-auto mt-10 grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {galleryImages.slice(0, 4).map((image, index) => (
+          {galleryImages2.slice(0, 4).map((image, index) => (
             <motion.img
               key={image}
               src={image}
@@ -128,6 +115,10 @@ export default function HomePage({ openBooking }) {
                 'Family beach moment in Zanzibar',
               ][index]}
               whileHover={{ scale: 1.03 }}
+              initial={{ opacity: 0, scale: 0.98 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.45, ease: 'easeOut' }}
               className="h-72 w-full rounded-2xl object-cover transition"
               loading="lazy"
             />
@@ -135,29 +126,7 @@ export default function HomePage({ openBooking }) {
         </div>
       </section>
 
-      <section className="section-pad pt-2">
-        <SectionTitle
-          eyebrow="Tour Packages"
-          title="Elegant Packages for Every Traveler"
-          description="Choose a ready-made luxury experience or let us tailor a private itinerary around your dates, style, and pace."
-          center
-        />
-        <div className="mx-auto mt-10 grid max-w-7xl gap-6 lg:grid-cols-3">
-          {[
-            { name: 'Solo Traveler Package', duration: '4 Days / 3 Nights', price: 'Starting from $450', note: 'Ideal for independent travelers who want curated island experiences with premium flexibility.' },
-            { name: 'Couple / Honeymoon Package', duration: '5 Days / 4 Nights', price: 'Starting from $850', note: 'Romantic island escapes with private moments, sunset dining, and seamless luxury touches.' },
-            { name: 'Group / Family Package', duration: 'Custom Pricing', price: 'Tailored Quote', note: 'Perfect for families and groups looking for a polished, fully customized Zanzibar experience.' },
-          ].map((pack) => (
-            <motion.div key={pack.name} whileHover={{ y: -6 }} className="glass rounded-3xl p-7 luxury-shadow">
-              <p className="text-xs uppercase tracking-[0.24em] text-gold">Package</p>
-              <h3 className="mt-3 font-heading text-3xl text-navy dark:text-sand">{pack.name}</h3>
-              <p className="mt-3 text-sm uppercase tracking-[0.16em] text-ocean dark:text-gold">{pack.duration}</p>
-              <p className="mt-3 font-heading text-2xl text-navy dark:text-sand">{pack.price}</p>
-              <p className="mt-4 text-sm text-navy/75 dark:text-sand/75">{pack.note}</p>
-            </motion.div>
-          ))}
-        </div>
-      </section>
+      {/* Featured Journeys moved to Tours & Safaris page to avoid duplication */}
 
       <section className="section-pad pt-2">
         <SectionTitle
@@ -184,10 +153,10 @@ export default function HomePage({ openBooking }) {
 
       <section className="section-pad pt-2">
         <div className="mx-auto max-w-7xl rounded-3xl bg-[url('https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286747/island1_dtmeam.jpg')] bg-cover bg-center p-8 sm:p-14">
-          <div className="rounded-3xl bg-midnight/70 p-8 text-[#FFF7EA] backdrop-blur-md sm:max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.24em] text-[#F3D98B] sm:text-base">Final Call</p>
+          <div className="rounded-3xl bg-midnight/70 p-8 text-sand backdrop-blur-md sm:max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.24em] text-gold sm:text-base">Final Call</p>
             <h3 className="mt-4 font-heading text-5xl leading-tight sm:text-6xl">Your Zanzibar Adventure Starts Here</h3>
-            <p className="mt-4 text-lg text-[#F9F1E3]/88 sm:text-xl">
+            <p className="mt-4 text-lg text-sand/88 sm:text-xl">
               From Zanzibar Beach Holidays to Tanzania Safari Packages, we design experiences that stay with you for a lifetime.
             </p>
             <button onClick={openBooking} className="mt-7 rounded-full bg-gold px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy transition hover:bg-sand sm:px-8 sm:py-4 sm:text-base">
@@ -198,13 +167,20 @@ export default function HomePage({ openBooking }) {
       </section>
 
       <section className="section-pad pt-2">
-        <div className="mx-auto max-w-7xl rounded-3xl border border-navy/10 bg-white/65 p-6 dark:bg-midnight/45">
-          <h3 className="font-heading text-2xl text-navy dark:text-sand">Premium CTA Collection</h3>
+          <div className="glass mx-auto max-w-7xl rounded-3xl p-6">
+          <h3 className="font-heading text-2xl text-page">Premium CTA Collection</h3>
           <div className="mt-4 flex flex-wrap gap-2">
-            {ctaButtons.map((item) => (
-              <span key={item} className="rounded-full bg-sand px-3 py-2 text-xs text-navy dark:bg-navy dark:text-sand">
+            {ctaButtons.map((item, i) => (
+              <motion.span
+                key={item}
+                whileHover={{ scale: 1.05, y: -4 }}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.03 }}
+                className="rounded-full border border-gold/30 bg-page-surface px-3 py-2 text-xs font-medium text-page shadow-sm transition hover:-translate-y-0.5 hover:border-gold/55 hover:text-gold"
+              >
                 {item}
-              </span>
+              </motion.span>
             ))}
           </div>
         </div>

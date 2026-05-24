@@ -7,7 +7,7 @@ export default function SectionTitle({ eyebrow, title, description, center = fal
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.22 }}
       className={center ? 'mx-auto max-w-3xl text-center' : 'max-w-3xl'}
     >
       {eyebrow ? (

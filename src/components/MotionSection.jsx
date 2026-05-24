@@ -8,7 +8,7 @@ export default function MotionSection({ children, className = '' }) {
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.18 }}
     >
       {children}
     </motion.section>

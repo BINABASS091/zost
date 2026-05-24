@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import BookingModal from '../components/BookingModal'
-import WhatsAppFloat from '../components/WhatsAppFloat'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 import useTheme from '../hooks/useTheme'
 
 export default function MainLayout({ children, isBookingOpen, openBooking, closeBooking }) {
@@ -20,7 +20,7 @@ export default function MainLayout({ children, isBookingOpen, openBooking, close
       <main className="pt-20">{children}</main>
       <Footer />
       <BookingModal open={isBookingOpen} onClose={closeBooking} />
-      <WhatsAppFloat />
+      <FloatingWhatsApp />
     </div>
   )
 }

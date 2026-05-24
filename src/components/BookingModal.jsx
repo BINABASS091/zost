@@ -17,7 +17,7 @@ export default function BookingModal({ open, onClose }) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             onClick={(event) => event.stopPropagation()}
-            className="w-full max-w-2xl rounded-3xl bg-white p-6 shadow-2xl dark:bg-navy"
+            className="glass w-full max-w-2xl rounded-3xl p-6"
           >
             <div className="mb-6 flex items-start justify-between">
               <div>

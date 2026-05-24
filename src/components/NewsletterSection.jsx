@@ -1,7 +1,16 @@
+import { motion } from 'framer-motion'
+import { fadeUp } from '../animations/variants'
+
 export default function NewsletterSection() {
   return (
     <section className="section-pad">
-      <div className="mx-auto max-w-5xl rounded-3xl bg-navy px-6 py-10 text-sand sm:px-10">
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.22 }}
+        className="mx-auto max-w-5xl rounded-3xl bg-navy px-6 py-10 text-sand sm:px-10"
+      >
         <p className="text-xs uppercase tracking-[0.24em] text-gold">Newsletter</p>
         <h3 className="mt-3 font-heading text-3xl">Luxury Travel Inspiration, Delivered</h3>
         <p className="mt-3 text-sand/80">
@@ -17,7 +26,7 @@ export default function NewsletterSection() {
             Subscribe
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   )
 }
