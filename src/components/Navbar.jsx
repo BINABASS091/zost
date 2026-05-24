@@ -120,7 +120,7 @@ export default function Navbar({ openBooking, theme, toggleTheme }) {
 
             <motion.div
               id="mobile-nav"
-              className="pointer-events-auto fixed left-1/2 top-1/2 z-50 w-[min(calc(100vw-1.5rem),24rem)] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[2rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(248,243,234,0.12))] p-4 shadow-[0_30px_90px_rgba(7,28,52,0.3)] backdrop-blur-2xl lg:hidden"
+              className="pointer-events-auto fixed left-1/2 top-20 z-50 flex max-h-[calc(100dvh-6.5rem)] w-[min(calc(100vw-1rem),22rem)] -translate-x-1/2 overflow-y-auto rounded-[1.75rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.18),rgba(248,243,234,0.14))] p-3 shadow-[0_30px_90px_rgba(7,28,52,0.3)] backdrop-blur-2xl lg:hidden sm:top-24 sm:max-h-[calc(100dvh-7rem)] sm:w-[min(calc(100vw-1.5rem),24rem)] sm:p-4"
               initial={{ opacity: 0, scale: 0.94, y: 14 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.96, y: 10 }}
@@ -129,20 +129,20 @@ export default function Navbar({ openBooking, theme, toggleTheme }) {
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(212,166,61,0.16),transparent_26%),radial-gradient(circle_at_bottom,rgba(14,94,111,0.14),transparent_28%)]" />
               <div className="absolute inset-0 texture-overlay opacity-30" />
 
-              <div className="relative text-center">
-                <div className="mx-auto mb-4 flex w-fit items-center gap-2 rounded-full border border-gold/20 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-gold shadow-[0_8px_20px_rgba(7,28,52,0.12)]">
+              <div className="relative w-full text-center">
+                <div className="mx-auto mb-3 flex w-fit items-center gap-2 rounded-full border border-gold/20 bg-white/10 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.28em] text-gold shadow-[0_8px_20px_rgba(7,28,52,0.12)] sm:mb-4">
                   Navigation
                 </div>
 
-                <div className="rounded-[1.4rem] border border-white/10 bg-white/12 p-3 shadow-[0_14px_30px_rgba(7,28,52,0.14)] backdrop-blur-xl">
-                  <div className="flex flex-col gap-2 text-center">
+                <div className="rounded-[1.35rem] border border-white/10 bg-white/12 p-2.5 shadow-[0_14px_30px_rgba(7,28,52,0.14)] backdrop-blur-xl sm:p-3">
+                  <div className="flex flex-col gap-1.5 text-center sm:gap-2">
                     {navLinks.map((link, index) => (
                       <NavLink
                         key={link.to}
                         to={link.to}
                         onClick={() => setOpen(false)}
                         className={({ isActive }) =>
-                          `group flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-navy text-sand shadow-[0_12px_24px_rgba(7,28,52,0.16)]' : 'text-navy/90 hover:bg-white/30 dark:text-sand'}`
+                          `group flex items-center justify-center gap-2 rounded-2xl px-4 py-2.5 text-sm font-medium transition sm:py-3 ${isActive ? 'bg-navy text-sand shadow-[0_12px_24px_rgba(7,28,52,0.16)]' : 'text-navy/90 hover:bg-white/30 dark:text-sand'}`
                         }
                       >
                         <motion.span
@@ -158,10 +158,10 @@ export default function Navbar({ openBooking, theme, toggleTheme }) {
                     ))}
                   </div>
 
-                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  <div className="mt-3 grid gap-2.5 sm:mt-4 sm:grid-cols-2 sm:gap-3">
                     <button
                       onClick={toggleTheme}
-                      className="inline-flex items-center justify-center gap-2 rounded-2xl border border-navy/10 bg-white/80 px-4 py-3 text-sm font-medium text-navy transition hover:bg-white dark:border-gold/15 dark:bg-midnight/30 dark:text-sand"
+                      className="inline-flex items-center justify-center gap-2 rounded-2xl border border-navy/10 bg-white/80 px-4 py-2.5 text-sm font-medium text-navy transition hover:bg-white dark:border-gold/15 dark:bg-midnight/30 dark:text-sand sm:py-3"
                     >
                       {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
                       {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
@@ -171,7 +171,7 @@ export default function Navbar({ openBooking, theme, toggleTheme }) {
                         setOpen(false)
                         openBooking()
                       }}
-                      className="inline-flex items-center justify-center rounded-2xl bg-navy px-4 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-sand shadow-[0_12px_24px_rgba(7,28,52,0.18)] transition hover:bg-ocean"
+                      className="inline-flex items-center justify-center rounded-2xl bg-navy px-4 py-2.5 text-sm font-semibold uppercase tracking-[0.18em] text-sand shadow-[0_12px_24px_rgba(7,28,52,0.18)] transition hover:bg-ocean sm:py-3"
                     >
                       Book Now
                     </button>
