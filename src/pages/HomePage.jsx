@@ -35,7 +35,7 @@ export default function HomePage({ openBooking }) {
 
   return (
     <>
-      <section className="relative min-h-[88vh] overflow-hidden">
+      <section className="relative h-screen w-screen overflow-hidden">
         {heroSlides.map((slide, index) => (
           <img
             key={slide}
@@ -51,7 +51,7 @@ export default function HomePage({ openBooking }) {
           initial={{ opacity: 0, y: 36 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9 }}
-          className="relative z-10 mx-auto flex min-h-[88vh] max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-8 lg:px-12"
+          className="relative z-10 mx-auto flex h-screen max-w-7xl flex-col items-center justify-center px-4 text-center sm:px-8 lg:px-12"
         >
           <motion.p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-gold sm:text-base" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.12 }}>
             {promoHeadlines[0]}
