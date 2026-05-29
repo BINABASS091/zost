@@ -95,7 +95,7 @@ export default function WelcomeSplash() {
               <motion.img
                 src={company.logoUrl}
                 alt="ZOST logo"
-                className="mx-auto mt-4 h-48 w-48 object-contain sm:h-56 sm:w-56 lg:h-64 lg:w-64"
+                className="mx-auto mt-4 h-64 w-64 object-contain sm:h-72 sm:w-72 lg:h-80 lg:w-80"
                 initial={{ scale: 0.88, opacity: 0, y: 10 }}
                 animate={reduceMotion ? { scale: 1, opacity: 1, y: 0 } : { scale: [0.96, 1, 1.02, 1], opacity: 1, y: 0 }}
                 transition={{ duration: 0.9, ease: 'easeOut' }}
