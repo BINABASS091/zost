@@ -457,6 +457,11 @@ export const contactCopy = {
     'Hello ZOST, I would like to plan a luxury Zanzibar trip. Please share package options.',
 }
 
+export const socialMedia = {
+  instagram: 'https://instagram.com/zost_zanzibar',
+  whatsapp: 'https://wa.me/255792179051?text=Hello%20ZOST,%20I%20would%20like%20to%20plan%20a%20luxury%20Zanzibar%20trip',
+}
+
 export const footer = {
   description:
     'ZOST delivers premium Zanzibar Tours, luxury island experiences, and tailor-made Tanzania Safari Packages for discerning travelers worldwide.',

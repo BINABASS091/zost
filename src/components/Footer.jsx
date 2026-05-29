@@ -1,6 +1,6 @@
-import { Camera, UsersRound, Share2, Send } from 'lucide-react'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { company, footer } from '../data/content'
+import { company, footer, socialMedia } from '../data/content'
 
 const toPath = {
   Home: '/',
@@ -32,17 +32,11 @@ export default function Footer() {
               </div>
               <p className="mt-5 max-w-md text-sm leading-7 text-sand/78">{footer.description}</p>
               <div className="mt-6 flex items-center gap-3 text-sand/75">
-                <a href="#" aria-label="Instagram" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
-                  <Camera size={18} />
+                <a href={socialMedia.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
+                  <FaInstagram size={18} />
                 </a>
-                <a href="#" aria-label="Community" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
-                  <UsersRound size={18} />
-                </a>
-                <a href="#" aria-label="Share" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
-                  <Share2 size={18} />
-                </a>
-                <a href="#" aria-label="Send" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
-                  <Send size={18} />
+                <a href={socialMedia.whatsapp} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="rounded-full border border-white/10 bg-white/5 p-3 transition hover:border-gold/40 hover:text-gold">
+                  <FaWhatsapp size={18} />
                 </a>
               </div>
             </div>
