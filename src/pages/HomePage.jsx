@@ -35,7 +35,7 @@ export default function HomePage({ openBooking }) {
 
   return (
     <>
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="">
         {heroSlides.map((slide, index) => (
           <img
             key={slide}
@@ -152,14 +152,14 @@ export default function HomePage({ openBooking }) {
       </section>
 
       <section className="section-pad pt-2">
-        <div className="mx-auto max-w-7xl rounded-3xl bg-[url('https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286747/island1_dtmeam.jpg')] bg-cover bg-center p-8 sm:p-14">
-          <div className="rounded-3xl bg-midnight/70 p-8 text-sand backdrop-blur-md sm:max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.24em] text-gold sm:text-base">Final Call</p>
-            <h3 className="mt-4 font-heading text-5xl leading-tight sm:text-6xl">Your Zanzibar Adventure Starts Here</h3>
-            <p className="mt-4 text-lg text-sand/88 sm:text-xl">
+        <div className="mx-auto max-w-7xl rounded-3xl bg-[url('https://res.cloudinary.com/djczmay2i/image/upload/q_auto/f_auto/v1779286747/island1_dtmeam.jpg')] bg-cover bg-center p-6 sm:p-10">
+          <div className="rounded-2xl bg-midnight/50 p-5 text-sand backdrop-blur-md sm:max-w-lg sm:p-6">
+            <p className="text-xs uppercase tracking-[0.24em] text-gold sm:text-sm">Final Call</p>
+            <h3 className="mt-3 font-heading text-3xl leading-tight sm:text-4xl">Your Zanzibar Adventure Starts Here</h3>
+            <p className="mt-3 text-base text-sand/88 sm:text-lg">
               From Zanzibar Beach Holidays to Tanzania Safari Packages, we design experiences that stay with you for a lifetime.
             </p>
-            <button onClick={openBooking} className="mt-7 rounded-full bg-gold px-7 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-navy transition hover:bg-sand sm:px-8 sm:py-4 sm:text-base">
+            <button onClick={openBooking} className="mt-5 rounded-full bg-gold px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-navy transition hover:bg-sand sm:px-7 sm:py-3 sm:text-base">
               Plan Your Journey
             </button>
           </div>
