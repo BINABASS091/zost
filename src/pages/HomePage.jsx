@@ -35,7 +35,7 @@ export default function HomePage({ openBooking }) {
 
   return (
     <>
-      <section className="relative h-screen w-screen overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden">
         {heroSlides.map((slide, index) => (
           <img
             key={slide}

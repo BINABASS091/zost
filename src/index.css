@@ -51,10 +51,14 @@ html.dark {
   --surface-border: rgba(212, 166, 61, 0.14);
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
+  padding: 0;
   font-family: var(--font-body);
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -63,6 +67,8 @@ body {
   background: var(--page-bg);
   color: var(--page-text);
   transition: background 0.25s ease, color 0.25s ease;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #root { min-height: 100vh; }
