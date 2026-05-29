@@ -3,7 +3,6 @@ import { Link, NavLink } from 'react-router-dom'
 import { Moon, Sun } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import LogoMark from './LogoMark'
-import HeaderOrnaments from './HeaderOrnaments'
 import { navLinks } from '../data/content'
 
 export default function Navbar({ openBooking, theme, toggleTheme }) {
@@ -35,7 +34,6 @@ export default function Navbar({ openBooking, theme, toggleTheme }) {
     <header className="pointer-events-none fixed left-1/2 top-3 z-40 w-[min(calc(100vw-1rem),72rem)] -translate-x-1/2 sm:top-4">
       <motion.div initial={{ y: -8, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.45 }} className={`pointer-events-auto mx-auto flex h-20 w-full items-center justify-between rounded-[1.5rem] border border-white/25 px-4 shadow-sm transition-all duration-300 sm:px-6 lg:px-8 ${shellClass}`}>
         <Link to="/" aria-label="Go to homepage"><LogoMark /></Link>
-        <HeaderOrnaments />
 
         <nav className="hidden items-center gap-7 lg:flex">
           {navLinks.map((link, i) => (
